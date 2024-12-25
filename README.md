@@ -56,7 +56,7 @@ module D_FF(D,clk,Q,Qbar);
  ![{F67F9AC8-7963-4CDF-81D7-C6AE56C5A617}](https://github.com/user-attachments/assets/f0a282a0-62d1-4b5c-8897-6b84444fe83b)
 
 
-
+Developed by : RAHUL RP  Registor number  :  24900488
 **RTL LOGIC FOR FLIPFLOPS**
 
 
