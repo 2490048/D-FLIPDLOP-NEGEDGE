@@ -57,6 +57,8 @@ module D_FF(D,clk,Q,Qbar);
 
 
 Developed by : RAHUL RP  Registor number  :  24900488
+
+
 **RTL LOGIC FOR FLIPFLOPS**
 
 
