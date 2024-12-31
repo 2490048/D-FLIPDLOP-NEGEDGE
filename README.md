@@ -14,7 +14,8 @@ Quartus prime
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
 
-![image](https://github.com/naavaneetha/D-FLIPDLOP-NEGEDGE/assets/154305477/48c81fe8-bc3f-40e7-95e2-519fc155ad51)
+![{E98C6EE9-00D6-480C-B226-7DEE51599B74}](https://github.com/user-attachments/assets/312e2f08-9b3e-4dad-b843-989734ab68f6)
+
 
 This circuit has single input D and two outputs Qtt & Qtt’. The operation of D flip-flop is similar to D Latch. But, this flip-flop affects the outputs only when positive transition of the clock signal is applied instead of active enable. The following table shows the state table of D flip-flop.
 
@@ -41,19 +42,33 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 **PROGRAM**
 
 module D_FF(D,clk,Q,Qbar);
+ 
  input D,clk;
+ 
  output reg Q;
+ 
  output reg Qbar;
+ 
  initial Q=0;
+ 
  initial Qbar=1;
+ 
  always @(posedge clk)
- begin
- Q=D;
- Qbar=~D;
- end
- endmodule
 
- ![{F67F9AC8-7963-4CDF-81D7-C6AE56C5A617}](https://github.com/user-attachments/assets/f0a282a0-62d1-4b5c-8897-6b84444fe83b)
+ ![{FFCD02BA-EE60-4EE2-9CBD-FE8229D88DAF}](https://github.com/user-attachments/assets/ed53338d-8b54-431c-b6ce-adca0f7dd7e1)
+
+ 
+ begin
+ 
+ Q=D;
+ 
+ Qbar=~D;
+ 
+ end
+ 
+ endmodule
+
+
 
 
 Developed by : RAHUL RP  Registor number  :  24900488
