@@ -14,8 +14,7 @@ Quartus prime
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
 
-![{E98C6EE9-00D6-480C-B226-7DEE51599B74}](https://github.com/user-attachments/assets/312e2f08-9b3e-4dad-b843-989734ab68f6)
-
+![image](https://github.com/naavaneetha/D-FLIPDLOP-NEGEDGE/assets/154305477/48c81fe8-bc3f-40e7-95e2-519fc155ad51)
 
 This circuit has single input D and two outputs Qtt & Qtt’. The operation of D flip-flop is similar to D Latch. But, this flip-flop affects the outputs only when positive transition of the clock signal is applied instead of active enable. The following table shows the state table of D flip-flop.
 
@@ -29,64 +28,44 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-1.Type the program in Quartus software.
-
-2.Compile and run the program.
-
-3.Generate the RTL schematic and save the logic diagram.
-
-4.Create nodes for inputs and outputs to generate the timing diagram.
-
-5.For different input combinations generate the timing diagram.
+1. Define Inputs/Outputs: Inputs: D (data), c1k (clock); Outputs: Q, Qbar (~Q).
+2. Initialization: Set Q = 0 and Qbar = 1 at the start of the simulation.
+3. D Flip-Flop Logic: On the positive edge of c1k, assign Q = D.
+4. Complementary Output: Update Qbar = ~D to maintain complementarity.
+5. Testbench: Test with various D and c1k values to verify data storage functionality.
 
 **PROGRAM**
 
-module D_FF(D,clk,Q,Qbar);
- 
- input D,clk;
- 
- output reg Q;
- 
- output reg Qbar;
- 
- initial Q=0;
- 
- initial Qbar=1;
- 
- always @(posedge clk)
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+Developed by: RAHUL RP
+RegisterNumber: 212224240125
+*/
 
- ![{FFCD02BA-EE60-4EE2-9CBD-FE8229D88DAF}](https://github.com/user-attachments/assets/ed53338d-8b54-431c-b6ce-adca0f7dd7e1)
-
- 
- begin
- 
- Q=D;
- 
- Qbar=~D;
- 
- end
- 
- endmodule
-
-
-
-
-Developed by : RAHUL RP  Registor number  :  24900488
-
+```
+module exp8(D,c1k,Q,Qbar);
+input D,c1k;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge c1k)
+begin
+Q=D;
+Qbar=~D;
+end
+endmodule
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
-
-
-![{9B83377B-0B03-4787-B556-932FA6C4CC91}](https://github.com/user-attachments/assets/be9749e0-be5a-4909-856f-36b74ef281dd)
+![image](https://github.com/user-attachments/assets/4f09eb8b-075c-4260-a2c6-2b9d5a34193c)
 
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-
-
-![{A97FCB60-E40E-42FA-B538-29AC66F2757D}](https://github.com/user-attachments/assets/574ced98-b794-433d-b7c8-726ee145b6d9)
+![image](https://github.com/user-attachments/assets/4ddec297-8a03-4d92-8601-826a237273b1)
 
 
 
 **RESULTS**
-Succesfully implemented D flipflop using verilog and validating their functionality using their functional tables
+
+Thus the D flipflop is implemented and verified.
